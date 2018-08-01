@@ -101,6 +101,34 @@ Gitflow lite is essentially the same as gitflow _minus release branches_. Once t
 #### What if you need to hotfix a release? 
 If your team is using gitflow lite but still using a release based methodology you may sometimes need to hotfix a release. Release based methodologies MUST adhere to SemVer 2.0.0. In order to hotfix a release create a branch off the tag of the release that needs to be patched and then follow best practice as outlined. 
 
+### Branch Names
+A branch name should be a logical description of the code inside the branch. It is a good idea to follow the Gitflow idioms for branch naming. These are well defined and understood by most developers.
+
+If the branch is related to a ticket or issue in some kind of issue tracking software it is a good idea to include the ticket / issue number in the name of the branch. Don't forget to also include a description of the ticket.
+
+Good
+
+```hotfix/SCRUM-101-fix-forgot-password```
+
+Bad (you have no idea what this branch is for without referencing the ticket)
+
+```hotfix/SCRUM-101```
+
+### Commit messages
+Chris Beams has written a [great article](https://chris.beams.io/posts/git-commit/) that goes into depth on the importance of and how to structure git commit messages. It's worth a read. Follow these guidelines. They are summed up as:
+
+1. Separate subject from body with a blank line
+2. Limit the subject line to 50 characters
+3. Capitalize the subject line
+4. Do not end the subject line with a period
+5. Use the imperative mood in the subject line
+6. Wrap the body at 72 characters
+7. Use the body to explain what and why vs. how
+
+If using issue tracking software it is considered best practice to link a git commit to the issue it is addressing. This can be accomplished by using smart commits [https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html](https://confluence.atlassian.com/fisheye/using-smart-commits-298976812.html).
+
+Use smart commits when possible.
+
 ### 3rd Party Dependencies
 Developers SHOULD NOT commit 3rd party dependencies to repositories. Every modern language has a dependency management tool. Use them. 
 
